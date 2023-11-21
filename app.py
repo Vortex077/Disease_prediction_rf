@@ -6,6 +6,7 @@ import numpy as np
 import sklearn
 from sklearn.feature_extraction.text import TfidfVectorizer
 
+extract_path = '/model'
 with zipfile.ZipFile('random_forest_java_model_02.zip', 'r') as zip_ref:
     zip_ref.extractall()
 rf_model=load("random_forest_java_model_02.pkl")
