@@ -1,10 +1,13 @@
 from flask import Flask,request,jsonify
 import joblib
+import zipfile
 from joblib import load
 import numpy as np
 import sklearn
 from sklearn.feature_extraction.text import TfidfVectorizer
 
+with zipfile.ZipFile('random_forest_java_model_02.zip', 'r') as zip_ref:
+    zip_ref.extractall()
 rf_model=load("random_forest_java_model_02.pkl")
 X_transformed = joblib.load("X_transformed.joblib")
 vectorizer = joblib.load("fitted_vectorizer.joblib")
