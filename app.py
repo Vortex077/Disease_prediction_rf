@@ -18,7 +18,7 @@ vectorizer = joblib.load("fitted_vectorizer.joblib")
 app = Flask(__name__)
 @app.route("/")
 def home():
-    return "Hello World!"
+    return "Hello World!!!!"
 @app.route('/predict',methods=["POST"])
 def predict():
     try:
